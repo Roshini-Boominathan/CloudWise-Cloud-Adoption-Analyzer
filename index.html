@@ -1,0 +1,382 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Cloud Adoption Strategy Analyzer for startups">
+    <title>CloudWise | Adoption Strategy Analyzer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="topbar">
+        <a class="brand" href="#">
+            <span class="brand-icon">☁</span>
+            CloudWise
+        </a>
+        <span class="topbar-label">CLOUD SERVICE MANAGEMENT</span>
+    </header>
+
+    <main class="container">
+
+        <section class="hero">
+            <div class="hero-content">
+                <span class="eyebrow">SMART CLOUD PLANNING</span>
+                <h1>Find the right cloud strategy for your startup.</h1>
+                <p>
+                    Assess your organization's capabilities, understand your
+                    requirements, and discover a cloud adoption strategy
+                    that fits your business.
+                </p>
+                <div class="hero-points">
+                    <span>✓ Capability assessment</span>
+                    <span>✓ Strategy recommendations</span>
+                    <span>✓ Adoption roadmap</span>
+                </div>
+            </div>
+
+            <div class="hero-visual" aria-hidden="true">
+                <div class="cloud-circle">☁</div>
+                <div class="orbit orbit-one"></div>
+                <div class="orbit orbit-two"></div>
+                <span class="floating-icon icon-one">▦</span>
+                <span class="floating-icon icon-two">⌘</span>
+                <span class="floating-icon icon-three">↗</span>
+                <span class="floating-icon icon-four">◇</span>
+            </div>
+        </section>
+
+        <section class="overview-grid">
+            <article class="overview-card">
+                <div class="overview-icon purple">◈</div>
+                <div>
+                    <h3>Organizational capability</h3>
+                    <p>Evaluate skills, budget and management capacity.</p>
+                </div>
+            </article>
+
+            <article class="overview-card">
+                <div class="overview-icon blue">◎</div>
+                <div>
+                    <h3>Business requirements</h3>
+                    <p>Consider growth, security and application needs.</p>
+                </div>
+            </article>
+
+            <article class="overview-card">
+                <div class="overview-icon green">↗</div>
+                <div>
+                    <h3>Actionable strategy</h3>
+                    <p>Generate a recommendation and adoption roadmap.</p>
+                </div>
+            </article>
+        </section>
+
+        <section class="workspace">
+            <div class="section-heading">
+                <div>
+                    <span class="eyebrow">ASSESSMENT WORKSPACE</span>
+                    <h2>Tell us about your startup</h2>
+                    <p>Complete the assessment to generate a tailored recommendation.</p>
+                </div>
+                <span class="step-label">01 / ASSESS</span>
+            </div>
+
+            <form id="assessmentForm">
+
+                <div class="form-section">
+                    <div class="form-section-title">
+                        <span class="number">01</span>
+                        <div>
+                            <h3>Organizational profile</h3>
+                            <p>Understand your current resources and expertise.</p>
+                        </div>
+                    </div>
+
+                    <div class="form-grid">
+                        <div class="field">
+                            <label for="startupName">Startup name</label>
+                            <input
+                                type="text"
+                                id="startupName"
+                                placeholder="e.g. NovaTech"
+                                maxlength="80"
+                            >
+                        </div>
+
+                        <div class="field">
+                            <label for="companySize">Organization size</label>
+                            <select id="companySize" required>
+                                <option value="small">1–10 employees</option>
+                                <option value="medium">11–50 employees</option>
+                                <option value="large">51–200 employees</option>
+                            </select>
+                        </div>
+
+                        <div class="field">
+                            <label for="expertise">Technical expertise</label>
+                            <select id="expertise" required>
+                                <option value="low">Low — limited IT skills</option>
+                                <option value="medium">Medium — basic IT team</option>
+                                <option value="high">High — experienced cloud team</option>
+                            </select>
+                        </div>
+
+                        <div class="field">
+                            <label for="budget">Available cloud budget</label>
+                            <select id="budget" required>
+                                <option value="low">Low — strict budget</option>
+                                <option value="medium">Medium — controlled spending</option>
+                                <option value="high">High — flexible investment</option>
+                            </select>
+                        </div>
+
+                        <div class="field full-width">
+                            <label for="management">Cloud management preference</label>
+                            <select id="management" required>
+                                <option value="managed">Provider-managed services</option>
+                                <option value="mixed">Combination of managed and self-managed</option>
+                                <option value="self">Greater control and self-management</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-section">
+                    <div class="form-section-title">
+                        <span class="number">02</span>
+                        <div>
+                            <h3>Business requirements</h3>
+                            <p>Identify the workloads and capabilities you need.</p>
+                        </div>
+                    </div>
+
+                    <div class="form-grid">
+                        <div class="field">
+                            <label for="workload">Primary workload</label>
+                            <select id="workload" required>
+                                <option value="business">Email, office and business tools</option>
+                                <option value="application">Website or business application</option>
+                                <option value="data">Data processing and analytics</option>
+                                <option value="mixed">Multiple complex workloads</option>
+                            </select>
+                        </div>
+
+                        <div class="field">
+                            <label for="growth">Expected business growth</label>
+                            <select id="growth" required>
+                                <option value="stable">Stable — limited growth</option>
+                                <option value="moderate">Moderate growth</option>
+                                <option value="rapid">Rapid growth or changing demand</option>
+                            </select>
+                        </div>
+
+                        <div class="field">
+                            <label for="security">Data sensitivity</label>
+                            <select id="security" required>
+                                <option value="standard">Standard business data</option>
+                                <option value="sensitive">Sensitive customer or business data</option>
+                                <option value="regulated">Highly regulated or restricted data</option>
+                            </select>
+                        </div>
+
+                        <div class="field">
+                            <label for="availability">Availability requirement</label>
+                            <select id="availability" required>
+                                <option value="standard">Standard — occasional downtime manageable</option>
+                                <option value="high">High — downtime must be limited</option>
+                                <option value="critical">Critical — outages have major impact</option>
+                            </select>
+                        </div>
+
+                        <div class="field full-width">
+                            <label for="providerNeed">Need for multiple cloud providers</label>
+                            <select id="providerNeed" required>
+                                <option value="uncertain">Not sure — recommend what is necessary</option>
+                                <option value="specialist">Need specialist services from different providers</option>
+                                <option value="resilience">Need a justified cross-provider resilience plan</option>
+                                <option value="mandatory">Business requirement mandates multiple providers</option>
+                            </select>
+                            <small>Multiple providers add complexity. Select a requirement only when it reflects a genuine business need.</small>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-section">
+                    <div class="form-section-title">
+                        <span class="number">03</span>
+                        <div>
+                            <h3>Prioritize your objectives</h3>
+                            <p>Choose the most important goal for your organization.</p>
+                        </div>
+                    </div>
+
+                    <div class="priority-options">
+                        <label class="priority-option">
+                            <input type="radio" name="priority" value="simplicity" checked>
+                            <span class="priority-content">
+                                <span class="priority-symbol">✦</span>
+                                <strong>Simplicity</strong>
+                                <small>Easy to manage</small>
+                            </span>
+                        </label>
+
+                        <label class="priority-option">
+                            <input type="radio" name="priority" value="cost">
+                            <span class="priority-content">
+                                <span class="priority-symbol">₹</span>
+                                <strong>Cost efficiency</strong>
+                                <small>Control spending</small>
+                            </span>
+                        </label>
+
+                        <label class="priority-option">
+                            <input type="radio" name="priority" value="scalability">
+                            <span class="priority-content">
+                                <span class="priority-symbol">↗</span>
+                                <strong>Scalability</strong>
+                                <small>Prepare for growth</small>
+                            </span>
+                        </label>
+
+                        <label class="priority-option">
+                            <input type="radio" name="priority" value="control">
+                            <span class="priority-content">
+                                <span class="priority-symbol">⚙</span>
+                                <strong>Control</strong>
+                                <small>More customization</small>
+                            </span>
+                        </label>
+                    </div>
+                </div>
+
+                <div class="form-actions">
+                    <button type="reset" class="button button-secondary" id="resetButton">
+                        Reset assessment
+                    </button>
+                    <button type="submit" class="button button-primary">
+                        Analyze &amp; recommend <span>→</span>
+                    </button>
+                </div>
+
+            </form>
+        </section>
+
+        <section id="results" class="results-section" hidden aria-live="polite">
+
+            <div class="results-header">
+                <div>
+                    <span class="eyebrow">ASSESSMENT RESULTS</span>
+                    <h2 id="resultTitle">Your recommended cloud strategy</h2>
+                    <p id="resultSubtitle"></p>
+                </div>
+                <button type="button" class="button button-secondary" id="downloadButton">
+                    ↓ Download report
+                </button>
+            </div>
+
+            <div class="result-hero">
+                <div class="result-main">
+                    <span class="result-kicker">RECOMMENDED STRATEGY</span>
+                    <h2 id="strategyName"></h2>
+                    <p id="strategyDescription"></p>
+                    <div id="strategyTags" class="tag-list"></div>
+                </div>
+                <div class="score-panel">
+                    <div class="score-circle" id="scoreCircle">
+                        <div>
+                            <strong id="readinessScore">0</strong>
+                            <span>/ 100</span>
+                        </div>
+                    </div>
+                    <h3 id="readinessLabel">Readiness</h3>
+                    <p id="readinessDescription"></p>
+                </div>
+            </div>
+
+            <div class="result-grid">
+                <article class="result-card">
+                    <div class="card-heading">
+                        <span class="card-icon purple">◎</span>
+                        <h3>Why this strategy?</h3>
+                    </div>
+                    <ul id="reasonList" class="detail-list"></ul>
+                </article>
+
+                <article class="result-card">
+                    <div class="card-heading">
+                        <span class="card-icon green">✓</span>
+                        <h3>Recommended services</h3>
+                    </div>
+                    <ul id="serviceList" class="detail-list"></ul>
+                </article>
+            </div>
+
+            <article class="result-card comparison-card">
+                <div class="card-heading">
+                    <span class="card-icon blue">▤</span>
+                    <div>
+                        <h3>Strategy comparison</h3>
+                        <p>Suitability based on your answers, not a provider benchmark.</p>
+                    </div>
+                </div>
+                <div id="comparisonList" class="comparison-list"></div>
+            </article>
+
+            <article class="result-card roadmap-card">
+                <div class="card-heading">
+                    <span class="card-icon orange">↗</span>
+                    <div>
+                        <h3>Implementation roadmap</h3>
+                        <p>A phased plan for adopting and managing your cloud services.</p>
+                    </div>
+                </div>
+                <div id="roadmapList" class="roadmap-list"></div>
+            </article>
+
+            <div class="result-grid">
+                <article class="result-card">
+                    <div class="card-heading">
+                        <span class="card-icon orange">!</span>
+                        <h3>Risks and controls</h3>
+                    </div>
+                    <ul id="riskList" class="detail-list"></ul>
+                </article>
+
+                <article class="result-card">
+                    <div class="card-heading">
+                        <span class="card-icon blue">◷</span>
+                        <h3>Success indicators</h3>
+                    </div>
+                    <ul id="metricList" class="detail-list"></ul>
+                </article>
+            </div>
+
+            <div class="final-note">
+                <strong>Course outcome alignment</strong>
+                <p id="outcomeText"></p>
+            </div>
+
+            <p class="disclaimer">
+                This tool provides an educational, rule-based recommendation.
+                Validate provider pricing, compliance requirements, regional availability,
+                service-level agreements, and technical constraints before real deployment.
+            </p>
+
+        </section>
+
+        <footer class="footer">
+            <div class="brand footer-brand">
+                <span class="brand-icon">☁</span>
+                CloudWise
+            </div>
+            <p>Cloud Service Management Mini Project</p>
+            <p>Cloud strategy aligned with business needs.</p>
+        </footer>
+
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
